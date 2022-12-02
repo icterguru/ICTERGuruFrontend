@@ -1,0 +1,70 @@
+# Defining the application port
+server:
+  port: 8088
+  
+# Defining the active profile
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    password: admin
+#    url: jdbc:mysql://localhost:3306/ictergurudb-dev
+#    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Springboot Tutorial1 Running on Dev Environment!!
+  
+# Enabling all available enpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+---
+
+spring:
+  profiles: test
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    password: admin
+#    url: jdbc:mysql://localhost:3306/ictergurudb-test
+#    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Springboot Tutorial1 Running on Test Evnironment!!
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    password: admin
+#    url: jdbc:mysql://localhost:3306/ictergurudb-prod
+#    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+welcome:
+  message: Welcome to Springboot Tutorial1 Running on Prod Evnironment!

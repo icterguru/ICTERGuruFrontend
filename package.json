@@ -1,0 +1,27 @@
+{
+  "name": "ICTERGuruWebApp",
+  "version": "1.0.0",
+  "description": "ICTERGuru WebApp Frontend",
+  "main": "index.js",
+  "scripts": {
+    "scripts": { "test": "jasmine" }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icterguru/ICTERGuruWebApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icterguru/ICTERGuruWebApp/issues"
+  },
+  "homepage": "https://github.com/icterguru/ICTERGuruWebApp#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "popper": "^1.0.1"
+  },
+  "devDependencies": {
+    "jasmine": "^4.4.0"
+  }
+}
